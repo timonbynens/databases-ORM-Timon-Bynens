@@ -12,7 +12,7 @@ class SpeciesRepository:
 
     def insert(self, payload: SpeciesCreate):
         item = Species.model_validate(payload)
-        self.session.add(db_object)
+        self.session.add(item)
         self.session.commit()
         self.session.refresh(item)
         return item

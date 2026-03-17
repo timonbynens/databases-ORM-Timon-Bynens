@@ -2,7 +2,7 @@ from sqlmodel import Session, select
 from models.birds import Bird, BirdCreate
 
 class BirdRepository:
-    def init(self, session: Session):
+    def __init__(self, session: Session):
         self.session = session
 
     def get_all(self):
